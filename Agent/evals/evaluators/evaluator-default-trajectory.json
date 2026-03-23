@@ -1,0 +1,13 @@
+{
+  "fileName": "evaluator-default-trajectory.json",
+  "id": "96787806-f853-43dc-af71-62f690fe6111",
+  "name": "Default Trajectory Evaluator",
+  "description": "An evaluator that checks for exact string matches between expected and actual outputs",
+  "category": 0,
+  "type": 1,
+  "prompt": "",
+  "model": "same-as-agent",
+  "targetOutputKey": "*",
+  "createdAt": "2026-03-23T09:50:29.517Z",
+  "updatedAt": "2026-03-23T10:11:57.983Z"
+}

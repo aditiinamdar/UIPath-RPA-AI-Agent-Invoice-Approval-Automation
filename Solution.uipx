@@ -1,0 +1,27 @@
+{
+  "DocVersion": "1.0.0",
+  "StudioMinVersion": "2025.04.0",
+  "SolutionId": "29c02c23-4489-4da9-a0cb-08de8695f5b5",
+  "Projects": [
+    {
+      "Type": "ProcessOrchestration",
+      "ProjectRelativePath": "Agentic Process/project.uiproj",
+      "Id": "f242c2e5-ea32-449a-a468-bf5cc907d347"
+    },
+    {
+      "Type": "WebApp",
+      "ProjectRelativePath": "SimpleApprovalApp/project.uiproj",
+      "Id": "7b97eb24-5176-4720-8b16-1a9052751399"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "RPA Workflow/project.uiproj",
+      "Id": "5fcaf17e-9b4c-4f2f-a6ca-4c99a9f94b1d"
+    },
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Agent/project.uiproj",
+      "Id": "001ab81e-30d0-4f32-9a23-a0ae77c16ba3"
+    }
+  ]
+}

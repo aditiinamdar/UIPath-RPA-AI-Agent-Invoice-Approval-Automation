@@ -1,0 +1,67 @@
+{
+  "id": "43183861-3873-466c-96b6-4e6fbcbe1473",
+  "fileName": "evaluation-set-1774260514205.json",
+  "evaluatorRefs": [
+    "96787806-f853-43dc-af71-62f690fe6111",
+    "314ca26a-f31b-4489-9f38-7f034f01d10c"
+  ],
+  "evaluations": [
+    {
+      "id": "e23b8887-752b-4a35-a963-ba7d7575f56e",
+      "name": "Approve",
+      "inputs": {
+        "InvoiceDate": "2026-05-21",
+        "InvoiceVendorName": "Cookie Supply Co. ",
+        "InvoiceNumber": "INV005",
+        "InvoiceAmount": 480
+      },
+      "expectedOutput": {
+        "Status": "Approve",
+        "Reason": "Within limit"
+      },
+      "expectedAgentBehavior": "",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "43183861-3873-466c-96b6-4e6fbcbe1473",
+      "createdAt": "2026-03-23T10:10:06.911Z",
+      "updatedAt": "2026-03-23T10:10:06.911Z",
+      "source": "manual"
+    },
+    {
+      "id": "284fdf07-1ea7-43a4-a37b-a7e862c7f7bc",
+      "name": "Review",
+      "inputs": {
+        "InvoiceDate": "2026-04-30",
+        "InvoiceVendorName": "Cookie Supply Co. ",
+        "InvoiceNumber": "INV008",
+        "InvoiceAmount": 10000
+      },
+      "expectedOutput": {
+        "Status": "Review",
+        "Reason": "Over limit"
+      },
+      "expectedAgentBehavior": "",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "43183861-3873-466c-96b6-4e6fbcbe1473",
+      "createdAt": "2026-03-23T10:11:23.310Z",
+      "updatedAt": "2026-03-23T10:11:23.310Z",
+      "source": "manual"
+    }
+  ],
+  "name": "Evaluation Set 2",
+  "batchSize": 10,
+  "timeoutMinutes": 20,
+  "modelSettings": [],
+  "agentMemorySettings": [],
+  "agentMemoryEnabled": false,
+  "lineByLineEvaluation": false,
+  "createdAt": "2026-03-23T10:08:34.205Z",
+  "updatedAt": "2026-03-23T10:11:23.310Z"
+}

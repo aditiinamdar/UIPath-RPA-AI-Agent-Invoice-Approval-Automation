@@ -1,0 +1,110 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-4o-2024-11-20-community-agents",
+    "maxTokens": 16384,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 25
+  },
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "InvoiceDate",
+      "InvoiceVendorName",
+      "InvoiceNumber",
+      "InvoiceAmount"
+    ],
+    "properties": {
+      "InvoiceDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "InvoiceVendorName": {
+        "type": "string"
+      },
+      "InvoiceNumber": {
+        "type": "string"
+      },
+      "InvoiceAmount": {
+        "type": "number"
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "Status": {
+        "type": "string",
+        "description": "Status of the invoice(approve or review)"
+      },
+      "Reason": {
+        "type": "string",
+        "description": "Reason for the status decision"
+      }
+    }
+  },
+  "metadata": {
+    "storageVersion": "47.0.0",
+    "isConversational": false,
+    "targetRuntime": "pythonAgent",
+    "showProjectCreationExperience": true
+  },
+  "type": "lowCode",
+  "projectId": "d3439d90-6c13-4fd4-8d95-e850d60b83de",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Here’s the extracted text from the image:\n\n---\n\nYou are an AI assistant designed to process invoice data and determine approval status based on specific rules. Your task is to analyse the provided invoice fields and return a Status and Reason for each invoice.\n\nRules for processing:\n\n1. If any of Invoice Vendor Name, Invoice Number, Invoice Date, or Invoice Amount is missing or empty, set Status to 'review' and Reason to 'Missing field.' (replace 'fields' with the actual missing field name).\n2. If all fields are present and Invoice Amount is less than or equal to 500, set status to 'Approve' and reason to 'Within limit'\n3. If all fields are present and Invoice Amount is greater than 500, set status to 'Review' and reason to 'Over limit'.\n\nYou must only return the Status and Reason as specified (Output schema). Do not provide any additional explanations or free-form text in your response.\n",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Here’s the extracted text from the image:\n\n---\n\nYou are an AI assistant designed to process invoice data and determine approval status based on specific rules. Your task is to analyse the provided invoice fields and return a Status and Reason for each invoice.\n\nRules for processing:\n\n1. If any of Invoice Vendor Name, Invoice Number, Invoice Date, or Invoice Amount is missing or empty, set Status to 'review' and Reason to 'Missing field.' (replace 'fields' with the actual missing field name).\n2. If all fields are present and Invoice Amount is less than or equal to 500, set status to 'Approve' and reason to 'Within limit'\n3. If all fields are present and Invoice Amount is greater than 500, set status to 'Review' and reason to 'Over limit'.\n\nYou must only return the Status and Reason as specified (Output schema). Do not provide any additional explanations or free-form text in your response.\n"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Here’s the extracted text from the image:\n\n---\n\nProcess the following invoice data:\n\nInvoice Vendor Name: {{InvoiceVendorName}}\nInvoice Number: {{InvoiceNumber}}\nInvoice Date: {{InvoiceDate}}\nInvoice Amount: {{InvoiceAmount}}\n\nApply the rules as specified in the system prompt and return only the status and reason in the required output format.\n",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Here’s the extracted text from the image:\n\n---\n\nProcess the following invoice data:\n\nInvoice Vendor Name: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.InvoiceVendorName"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nInvoice Number: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.InvoiceNumber"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nInvoice Date: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.InvoiceDate"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nInvoice Amount: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.InvoiceAmount"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nApply the rules as specified in the system prompt and return only the status and reason in the required output format.\n"
+        }
+      ]
+    }
+  ]
+}

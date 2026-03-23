@@ -1,0 +1,10 @@
+{
+  "ProjectType": "WebApp",
+  "WebAppSettings": {
+    "AppId": "IDc1f62b6ffabf4b919fe5367efb2b7b92",
+    "IsCoreProject": true
+  },
+  "Name": "SimpleApprovalApp",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}
